@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Event Creator</string>
+    <string name="usuario">Nome do Usuario</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="seja_bem_vindo">Seja bem vindo</string>
+    <string name="login">Login</string>
+    <string name="confirme_sua_senha">Confirme sua senha</string>
+
+    <string name="eventos_perto_de_voce">Eventos Perto De Voce</string>
+    <string name="encontre_coisas_para_fazer">Encontre coisas para fazer</string>
+
+    <!-- Botoes da ActivityHome-->
+    <string name="minha_agenda">Minha Agenda</string>
+    <string name="criar_evento">+ Criar Evento</string>
+    <string name="meus_eventos">Meus Eventos</string>
+    <string name="meus_convites">Meus Convites</string>
+    <string name="sua_localiza_o">Sua Localização</string>
+    <string name="eventos_que_voce_participou">Eventos que voce participou</string>
+    <string name="_3"><![CDATA[<3]]></string>
+
+    <!-- Strings da Activity Tolbar -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="perfil">Perfil</string>
+    <string name="coisas_para_fazer">Coisas para fazer</string>
+    <string name="eventos_proximos">Eventos Próximos</string>
+    <string name="eventos_participados">Eventos Participados</string>
+    <string name="title_activity_criar_eventos">CriarEventosActivity</string>
+
+    <!--Strings da Activity Criar Evento -->
+    <string name="nome_do_evento">Nome do Evento</string>
+    <string name="data_evento">02/02/2020</string>
+    <string name="adicionar_evento">Adicionar Evento</string>
+    <string name="adicionar_foto">+ Adicionar Foto</string>
+    <string name="hora_do_evento">22:00</string>
+    <string name="endere_o_do_evento">Endereço do evento</string>
+    <string name="categoria">O evento é publico?</string>
+    <!-- -->
+
+
+</resources>

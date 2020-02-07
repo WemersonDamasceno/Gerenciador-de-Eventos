@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundologin"
+    android:orientation="vertical"
+    tools:context=".views.HomeActivity">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#005CC5"
+        app:tabSelectedTextColor="#A9A9A9"
+        app:tabTextColor="#F5FFFA">
+        
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perfil">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eventos_proximos">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coisas_para_fazer">
+    </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eventos_participados">
+        </com.google.android.material.tabs.TabItem>
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imagemEventoHome"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tabLayout"
+        android:scaleType="fitXY"
+        android:src="@drawable/eventos"/>
+
+    <TextView
+        android:id="@+id/myLocalization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagemEventoHome"
+        android:text="@string/sua_localiza_o"
+        android:textColor="#F5FFFA"
+        android:textSize="20sp" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/scrollButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/myLocalization">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAddEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/arredondar"
+                android:backgroundTint="#3C91F1"
+                android:text="@string/criar_evento"
+                android:textColor="#F5FFFA" />
+
+            <Button
+                android:id="@+id/buttonAgenda"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/arredondar"
+                android:backgroundTint="#1EB9DD"
+                android:text="@string/minha_agenda" />
+
+            <Button
+                android:id="@+id/buttonMeusEventos"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/arredondar"
+                android:backgroundTint="#1EB9DD"
+                android:text="@string/meus_eventos" />
+
+            <Button
+                android:id="@+id/buttonMeusConvites"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/arredondar"
+                android:backgroundTint="#1EB9DD"
+                android:text="@string/meus_convites" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+
+        android:id="@+id/scrollLast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollButton"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:id="@+id/layoutEventos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_layout"
+                android:orientation="vertical"
+                android:padding="2dp">
+                <ImageView
+                    android:id="@+id/imagemEventoHome1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tabLayout"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/karaoke"/>
+                <TextView
+                    android:id="@+id/horarioEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AMANHÃ ÁS 22:00"
+                    android:textColor="#FF0000"/>
+
+                <TextView
+                    android:id="@+id/nomeEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Karaokê do China"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/enderecoEvento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Boate Azul - Rua João Tavares - Quixeramobim CE"/>
+                    <Button
+                        android:id="@+id/favoritar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="@string/_3"
+                        android:textColor="#FF0000"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_layout"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/imagemEventoPalesta1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/palestra_1"/>
+                <TextView
+                    android:id="@+id/horarioEvento1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEXTA ÁS 20:00"
+                    android:textColor="#FF0000"/>
+
+                <TextView
+                    android:id="@+id/nomeEvento1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Palestra do Jack Chan"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/enderecoEvento1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UFC - Rua João Tavares - Quixadá CE"/>
+                    <Button
+                        android:id="@+id/favoritar1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="@string/_3"
+                        android:textColor="#FF0000"/>
+                </LinearLayout>
+            </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/border_layout"
+               android:orientation="vertical"
+               android:padding="2dp">
+
+               <ImageView
+                   android:id="@+id/imagemEventoShow"
+                   android:layout_width="wrap_content"
+                   android:layout_height="150dp"
+                   android:layout_below="@+id/tabLayout"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/show_1"/>
+
+               <TextView
+                   android:id="@+id/horarioEvento2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="AMANHÃ ÁS 22:00"
+                   android:textColor="#FF0000"/>
+
+               <TextView
+                   android:id="@+id/nomeEvento3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Guns n' Roses with Slash"
+                   android:textColor="#000000"
+                   android:textSize="20sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:id="@+id/enderecoEvento4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Casa de Show - Rua João Tavares - Quixeramobim CE"/>
+                   <Button
+                       android:id="@+id/favoritar5"
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       android:text="@string/_3"
+                       android:textColor="#FF0000"/>
+               </LinearLayout>
+           </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+</RelativeLayout>
