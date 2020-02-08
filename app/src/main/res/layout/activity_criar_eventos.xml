@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundologin"
+    tools:context=".views.CriarEventosActivity"
+    tools:ignore="ExtraText">
+
+
+    <TextView
+        android:id="@+id/addEvento"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/border_layout"
+        android:backgroundTint="#005CC5"
+        android:text="@string/adicionar_evento"
+        android:textColor="#FFFAFA"
+        android:textSize="30sp" />
+
+
+    <ImageView
+        android:id="@+id/imageViewEvento"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/addEvento"
+        android:layout_centerHorizontal="true"
+        android:background="#808080"
+        android:scaleType="fitXY"
+        android:src="@drawable/notfound" />
+
+
+    <Button
+        android:id="@+id/buttonAddFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/arredondar"
+        android:backgroundTint="#1C1C1C"
+        android:text="@string/adicionar_foto"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewEvento"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/criarNameEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="@string/nome_do_evento"
+            android:textColorHint="#FFFAF0"
+            android:textSize="25sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/criarDataEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:background="#4169E1"
+        android:ems="7"
+        android:gravity="center"
+        android:hint="@string/data"
+        android:textColor="#FFFAFA"
+        android:textColorHint="#FFFAFA"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/criarHoraEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/criarDataEvento"
+        android:background="#4169E1"
+        android:ems="7"
+        android:gravity="center"
+        android:hint="@string/hora"
+        android:textColor="#FFFAFA"
+        android:textColorHint="#FFFAFA"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/criarDataEvento"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/criarLocalizacaoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:hint="@string/endere_o_do_evento"
+            android:textColorHint="#FFFAFA"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second"
+        android:layout_marginTop="20dp"
+        android:text="@string/categoria"
+        android:textColor="#FFFAFA"
+        android:textSize="17sp" />
+
+
+    <Button
+        android:id="@+id/buttonCriarEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoria"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#005CC5"
+        android:text="Criar"
+        android:textSize="20sp" />
+
+</RelativeLayout>
