@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -97,6 +98,26 @@ public class CriarEventosActivity extends AppCompatActivity implements TimePicke
         });
 
 
+        buttonCriarEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CriarEventosActivity.this, "Ainda falta implementar", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     @Override
@@ -164,7 +185,7 @@ public class CriarEventosActivity extends AppCompatActivity implements TimePicke
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         String dia = dayOfMonth + "";
-        month++;
+        month++; //ajeitar o mes;
         String mes = month + "";
         if (dayOfMonth <= 9) {
             dia = "0" + dia;

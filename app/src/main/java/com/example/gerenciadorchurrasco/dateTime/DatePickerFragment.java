@@ -19,13 +19,11 @@ public class DatePickerFragment extends DialogFragment {
         int ano = calendar.get(Calendar.YEAR);
         int mes = calendar.get(Calendar.MONTH);
         int dia = calendar.get(Calendar.DAY_OF_YEAR);
-        mes--;
+        mes--; //ajeitar o mes
         DatePickerDialog mDatePicker = new DatePickerDialog(getActivity(),
                 (DatePickerDialog.OnDateSetListener) getActivity(),
                 ano, mes, dia);
-
         mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis());
-
         return mDatePicker;
     }
 
