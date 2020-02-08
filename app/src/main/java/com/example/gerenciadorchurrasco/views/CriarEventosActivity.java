@@ -164,6 +164,7 @@ public class CriarEventosActivity extends AppCompatActivity implements TimePicke
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         String dia = dayOfMonth + "";
+        month++;
         String mes = month + "";
         if (dayOfMonth <= 9) {
             dia = "0" + dia;
