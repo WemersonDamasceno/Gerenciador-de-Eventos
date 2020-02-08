@@ -29,6 +29,7 @@
     <string name="title_activity_criar_eventos">CriarEventosActivity</string>
 
     <!--Strings da Activity Criar Evento -->
+
     <string name="nome_do_evento">Nome do Evento</string>
     <string name="data_evento">02/02/2020</string>
     <string name="adicionar_evento">Adicionar Evento</string>
@@ -37,6 +38,8 @@
     <string name="endere_o_do_evento">Endereço do evento</string>
     <string name="categoria">O evento é publico?</string>
     <string name="escolher_outra_foto">ESCOLHER OUTRA FOTO</string>
+    <string name="data"> Data</string>
+    <string name="hora"> Hora</string>
     <!-- -->
 
 
